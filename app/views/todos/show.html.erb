@@ -1,22 +1,18 @@
 <h1>
-  <%= @todo.task %>
-  -
-  Completed: <%= @todo.completed ? 'Yes' : 'No' %>
+  Task: <%= @todo.task %>
 </h1>
 
-<blockquote>
-  <%= @todo.task %>
-</blockquote>
+<h2>
+  Completed: <%= @todo.completed ? 'Yes' : 'No' %>
+</h2>
 
-<cite>
+<p>
   Owner: <%= @todo.owner %>
-</cite>
+</p>
 
-<br />
-
-<i>
+<p>
   Description: <%= @todo.description %>
-</i>
+</p>
 
 <hr />
 
