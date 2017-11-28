@@ -1,0 +1,17 @@
+<h1> To Do List </h1>
+
+<% if @todos.any? %>
+
+<% @todos.each do |todo| %>
+  <h2>
+    <%= link_to todo.task, todo_path(todo) %>
+  </h2>
+  <% end %>
+
+<% else %>
+
+  <h4>Nothing to do. Must be nice!</h4>
+
+<% end %>
+
+<%= link_to 'Add New Task', new_todo_path %>

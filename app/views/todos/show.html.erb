@@ -1,0 +1,29 @@
+<h1>
+  <%= @todo.task %>
+  -
+  Completed: <%= @todo.completed ? 'Yes' : 'No' %>
+</h1>
+
+<blockquote>
+  <%= @todo.task %>
+</blockquote>
+
+<cite>
+  Owner: <%= @todo.owner %>
+</cite>
+
+<br />
+
+<i>
+  Description: <%= @todo.description %>
+</i>
+
+<hr />
+
+<div class='action-buttons'>
+  <%= link_to 'Edit', edit_todo_path(@todo) %>
+  <%= link_to 'Delete', todo_path(@todo), 
+      method: :delete,
+      data: { confirm: 'Really Delete?' } %>
+  <%= link_to 'Task List', todos_path %>
+</div>

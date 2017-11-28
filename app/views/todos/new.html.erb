@@ -1,0 +1,15 @@
+<h1>New Task</h1>
+<%= form_for @todo do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task %>
+  <br />
+  <%= f.label :owner %>
+  <%= f.text_field :owner %>
+  <br />
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br />
+  <%= f.submit 'Submit' %>
+<% end %>
+
+<%= link_to 'Task List', todos_path, class: 'btn btn-primary' %>
